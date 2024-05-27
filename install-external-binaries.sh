@@ -23,8 +23,8 @@ download $TMP_DIST/tlsx.zip https://github.com/projectdiscovery/tlsx/releases/do
 extractZip $TMP_DIST/tlsx.zip
 
 install_banner "katana"
-download $TMP_DIST/katana.zip https://github.com/projectdiscovery/katana/releases/download/v1.1.0/katana_1.1.0_linux_amd64.zip
-extractZip $TMP_DIST/katana.zip
+go install github.com/projectdiscovery/katana/cmd/katana@latest
+cp /root/go/bin/katana /root/osmedeus-base/binaries/katana
 
 install_banner "dnsx"
 download $TMP_DIST/dnsx.zip https://github.com/projectdiscovery/dnsx/releases/download/v1.2.1/dnsx_1.2.1_linux_amd64.zip
@@ -43,8 +43,8 @@ download $TMP_DIST/naabu.zip https://github.com/projectdiscovery/naabu/releases/
 extractZip $TMP_DIST/naabu.zip
 
 install_banner "gau"
-download $TMP_DIST/gau.gz https://github.com/lc/gau/releases/download/v2.2.1/gau_2.2.1_linux_amd64.tar.gz
-extractGz $TMP_DIST/gau.gz
+go install github.com/lc/gau/v2/cmd/gau@latest > /dev/null
+cp /root/go/bin/gau /root/osmedeus-base/binaries/gau
 
 install_banner "ffuf"
 download $TMP_DIST/ffuf.gz https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
@@ -83,9 +83,8 @@ download $TMP_DIST/json-cleaner.gz https://github.com/j3ssie/json-cleaner/releas
 extractGz $TMP_DIST/json-cleaner.gz
 
 install_banner "jsleak"
-download $TMP_DIST/jsleak.gz https://github.com/0xTeles/jsleak/archive/refs/tags/jsleak_v2.2.tar.gz
-extractGz $TMP_DIST/jsleak.gz
-mv /root/go/bin/jsleak_v2.2 /root/go/bin/jsleak
+go install github.com/channyein1337/jsleak@latest > /dev/null
+cp /root/go/bin/jsleak /root/osmedeus-base/binaries/jsleak
 
 install_banner "jsluice"
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest > /dev/null
@@ -109,11 +108,11 @@ cp /usr/bin/bc /root/osmedeus-base/binaries/bc
 
 install_banner "arjun"
 pip3 install arjun > /dev/null
-cp /usr/bin/arjun /root/osmedeus-base/binaries/arjun
+cp /usr/local/bin/arjun /root/osmedeus-base/binaries/arjun
 
 install_banner "gf"
-go install github.com/tomnomnom/gf > /dev/null
-cp /usr/local/bin/gf /root/osmedeus-base/binaries/gf
+go install github.com/tomnomnom/gf@latest > /dev/null
+cp /root/go/bin/gf /root/osmedeus-base/binaries/gf
 
 install_banner "cookiemonster"
 go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest > /dev/null
@@ -128,7 +127,7 @@ rm -rf nomore403/
 
 install_banner "LFImap"
 git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries/LFImap
-pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt
+pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt > /dev/null
 
 
 
