@@ -85,9 +85,10 @@ extractGz $TMP_DIST/json-cleaner.gz
 install_banner "jsleak"
 download $TMP_DIST/jsleak.gz https://github.com/0xTeles/jsleak/archive/refs/tags/jsleak_v2.2.tar.gz
 extractGz $TMP_DIST/jsleak.gz
+mv /root/go/bin/jsleak_v2.2 /root/go/bin/jsleak
 
 install_banner "jsluice"
-go install github.com/BishopFox/jsluice/cmd/jsluice@latest
+go install github.com/BishopFox/jsluice/cmd/jsluice@latest > /dev/null
 cp /root/go/bin/jsluice /root/osmedeus-base/binaries/jsluice
 
 install_banner "jq"
@@ -99,34 +100,34 @@ download $TMP_DIST/htmlq.gz https://github.com/mgdm/htmlq/releases/download/v0.4
 extractGz $TMP_DIST/htmlq.gz
 
 install_banner "ent"
-apt-get install ent
+apt-get install ent > /dev/null
 cp /usr/bin/ent /root/osmedeus-base/binaries/ent
 
 install_banner "bc"
-apt-get install bc
+apt-get install bc > /dev/null
 cp /usr/bin/bc /root/osmedeus-base/binaries/bc
 
 install_banner "arjun"
-pip3 install arjun
+pip3 install arjun > /dev/null
 cp /usr/bin/arjun /root/osmedeus-base/binaries/arjun
 
 install_banner "gf"
-go install -u github.com/tomnomnom/gf
+go install github.com/tomnomnom/gf > /dev/null
 cp /usr/local/bin/gf /root/osmedeus-base/binaries/gf
 
 install_banner "cookiemonster"
-go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest
+go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest > /dev/null
 cp /root/go/bin/cookiemonster /root/osmedeus-base/binaries/cookiemonster
 
 install_banner "nomore403"
 download $TMP_DIST/nomore403 https://github.com/devploit/nomore403/releases/download/1.0.1/nomore403_linux_amd64
 mv $TMP_DIST/nomore403 /root/osmedeus-base/binaries/nomore403
-git clone https://github.com/devploit/nomore403
+git clone https://github.com/devploit/nomore403 > /dev/null
 cp -r nomore403/payloads /root/osmedeus-base/binaries/403nomore-payloads
 rm -rf nomore403/
 
 install_banner "LFImap"
-git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries/
+git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries/LFImap
 pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt
 
 
