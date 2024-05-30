@@ -159,3 +159,8 @@ install_banner "cloud_enum"
 git clone https://github.com/initstring/cloud_enum /root/osmedeus-base/binaries/cloud_enum > /dev/null
 pip3 install -r /root/osmedeus-base/binaries/cloud_enum/requirements.txt > /dev/null
 cp /root/osmedeus-base/binaries/cloud_enum/cloud_enum.py /root/osmedeus-base/binaries/cloud_enum.py 
+
+install_banner "GraphCrawler"
+git clone https://github.com/gsmith257-cyber/GraphCrawler /root/osmedeus-base/binaries/GraphCrawler > /dev/null
+pip3 install -r /root/osmedeus-base/binaries/GraphCrawler/requirements.txt > /dev/null
+
