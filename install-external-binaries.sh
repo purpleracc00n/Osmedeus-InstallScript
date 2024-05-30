@@ -129,5 +129,33 @@ install_banner "LFImap"
 git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries/LFImap
 pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt > /dev/null
 
+install_banner "NucleiFuzzer"
+git clone https://github.com/0xKayala/NucleiFuzzer.git > /dev/null 
+chmod +x NucleiFuzzer/install.sh 
+NucleiFuzzer/install.sh 2>/dev/null
+cp /usr/bin/nf /root/osmedeus-base/binaries/nf
 
+install_banner "unfurl"
+go install github.com/tomnomnom/unfurl@latest > /dev/null
+cp /root/go/bin/unfurl /root/osmedeus-base/binaries/unfurl
 
+install_banner "Oralyzer"
+git clone https://github.com/r0075h3ll/Oralyzer.git /root/osmedeus-base/binaries/Oralyzer > /dev/null
+pip3 install -r /root/osmedeus-base/binaries/Oralyzer/requirements.txt > /dev/null
+
+install_banner "sqlmap"
+apt-get install sqlmap > /dev/null
+cp /usr/bin/sqlmap /root/osmedeus-base/binaries/sqlmap
+
+install_banner "tplmap"
+git clone https://github.com/epinna/tplmap /root/osmedeus-base/binaries/tplmap > /dev/null
+pip3 install -r /root/osmedeus-base/binaries/tplmap/requirements.txt > /dev/null
+
+install_banner "dalfox"
+go install github.com/hahwul/dalfox/v2@latest > /dev/null
+cp /root/go/bin/dalfox /root/osmedeus-base/binaries/dalfox
+
+install_banner "cloud_enum"
+git clone https://github.com/initstring/cloud_enum /root/osmedeus-base/binaries/cloud_enum > /dev/null
+pip3 install -r /root/osmedeus-base/binaries/cloud_enum/requirements.txt > /dev/null
+cp /root/osmedeus-base/binaries/cloud_enum/cloud_enum.py /root/osmedeus-base/binaries/cloud_enum.py 
