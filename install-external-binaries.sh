@@ -23,7 +23,7 @@ download $TMP_DIST/tlsx.zip https://github.com/projectdiscovery/tlsx/releases/do
 extractZip $TMP_DIST/tlsx.zip
 
 install_banner "katana"
-go install github.com/projectdiscovery/katana/cmd/katana@latest
+go install github.com/projectdiscovery/katana/cmd/katana@latest 2>&1 > /dev/null
 cp /root/go/bin/katana /root/osmedeus-base/binaries/katana
 
 install_banner "dnsx"
@@ -43,7 +43,7 @@ download $TMP_DIST/naabu.zip https://github.com/projectdiscovery/naabu/releases/
 extractZip $TMP_DIST/naabu.zip
 
 install_banner "gau"
-go install github.com/lc/gau/v2/cmd/gau@latest > /dev/null
+go install github.com/lc/gau/v2/cmd/gau@latest 2>&1 > /dev/null
 cp /root/go/bin/gau /root/osmedeus-base/binaries/gau
 
 install_banner "ffuf"
@@ -83,11 +83,11 @@ download $TMP_DIST/json-cleaner.gz https://github.com/j3ssie/json-cleaner/releas
 extractGz $TMP_DIST/json-cleaner.gz
 
 install_banner "jsleak"
-go install github.com/channyein1337/jsleak@latest > /dev/null
+go install github.com/channyein1337/jsleak@latest 2>&1 > /dev/null
 cp /root/go/bin/jsleak /root/osmedeus-base/binaries/jsleak
 
 install_banner "jsluice"
-go install github.com/BishopFox/jsluice/cmd/jsluice@latest > /dev/null
+go install github.com/BishopFox/jsluice/cmd/jsluice@latest 2>&1 > /dev/null
 cp /root/go/bin/jsluice /root/osmedeus-base/binaries/jsluice
 
 install_banner "jq"
@@ -111,11 +111,11 @@ pip3 install arjun > /dev/null
 cp /usr/local/bin/arjun /root/osmedeus-base/binaries/arjun
 
 install_banner "gf"
-go install github.com/tomnomnom/gf@latest > /dev/null
+go install github.com/tomnomnom/gf@latest 2>&1 > /dev/null
 cp /root/go/bin/gf /root/osmedeus-base/binaries/gf
 
 install_banner "cookiemonster"
-go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest > /dev/null
+go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest 2>&1 > /dev/null
 cp /root/go/bin/cookiemonster /root/osmedeus-base/binaries/cookiemonster
 
 install_banner "nomore403"
@@ -130,13 +130,13 @@ git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries
 pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt > /dev/null
 
 install_banner "NucleiFuzzer"
-git clone https://github.com/0xKayala/NucleiFuzzer.git > /dev/null 
-chmod +x NucleiFuzzer/install.sh 
-NucleiFuzzer/install.sh 2>/dev/null
+git clone https://github.com/0xKayala/NucleiFuzzer.git /tmp/NucleiFuzzer > /dev/null 
+chmod +x /tmp/NucleiFuzzer/install.sh 
+/tmp/NucleiFuzzer/install.sh 2>/dev/null
 cp /usr/bin/nf /root/osmedeus-base/binaries/nf
 
 install_banner "unfurl"
-go install github.com/tomnomnom/unfurl@latest > /dev/null
+go install github.com/tomnomnom/unfurl@latest 2>&1 > /dev/null
 cp /root/go/bin/unfurl /root/osmedeus-base/binaries/unfurl
 
 install_banner "Oralyzer"
@@ -149,10 +149,10 @@ cp /usr/bin/sqlmap /root/osmedeus-base/binaries/sqlmap
 
 install_banner "tplmap"
 git clone https://github.com/epinna/tplmap /root/osmedeus-base/binaries/tplmap > /dev/null
-pip3 install -r /root/osmedeus-base/binaries/tplmap/requirements.txt > /dev/null
+pip3 install -r /root/osmedeus-base/binaries/tplmap/requirements.txt 2>&1 > /dev/null
 
 install_banner "dalfox"
-go install github.com/hahwul/dalfox/v2@latest > /dev/null
+go install github.com/hahwul/dalfox/v2@latest 2>&1 > /dev/null
 cp /root/go/bin/dalfox /root/osmedeus-base/binaries/dalfox
 
 install_banner "cloud_enum"
