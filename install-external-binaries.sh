@@ -24,7 +24,7 @@ extractZip $TMP_DIST/tlsx.zip
 
 install_banner "katana"
 go install github.com/projectdiscovery/katana/cmd/katana@latest
-cp /root/go/bin/katana /root/osmedeus-base/binaries/katana
+cp /root/go/bin/katana /osmedeus-base/binaries/katana
 
 install_banner "dnsx"
 download $TMP_DIST/dnsx.zip https://github.com/projectdiscovery/dnsx/releases/download/v1.2.1/dnsx_1.2.1_linux_amd64.zip
@@ -44,7 +44,7 @@ extractZip $TMP_DIST/naabu.zip
 
 install_banner "gau"
 go install github.com/lc/gau/v2/cmd/gau@latest > /dev/null
-cp /root/go/bin/gau /root/osmedeus-base/binaries/gau
+cp /root/go/bin/gau /osmedeus-base/binaries/gau
 
 install_banner "ffuf"
 download $TMP_DIST/ffuf.gz https://github.com/ffuf/ffuf/releases/download/v2.1.0/ffuf_2.1.0_linux_amd64.tar.gz
@@ -84,15 +84,15 @@ extractGz $TMP_DIST/json-cleaner.gz
 
 install_banner "jsleak"
 go install github.com/channyein1337/jsleak@latest > /dev/null
-cp /root/go/bin/jsleak /root/osmedeus-base/binaries/jsleak
+cp /root/go/bin/jsleak /osmedeus-base/binaries/jsleak
 
 install_banner "jsluice"
 go install github.com/BishopFox/jsluice/cmd/jsluice@latest > /dev/null
-cp /root/go/bin/jsluice /root/osmedeus-base/binaries/jsluice
+cp /root/go/bin/jsluice /osmedeus-base/binaries/jsluice
 
 install_banner "jq"
 download $TMP_DIST/jq https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64
-mv $TMP_DIST/jq /root/osmedeus-base/binaries/jq
+mv $TMP_DIST/jq /osmedeus-base/binaries/jq
 
 install_banner "htmlq"
 download $TMP_DIST/htmlq.gz https://github.com/mgdm/htmlq/releases/download/v0.4.0/htmlq-x86_64-linux.tar.gz
@@ -100,67 +100,67 @@ extractGz $TMP_DIST/htmlq.gz
 
 install_banner "ent"
 apt-get install ent > /dev/null
-cp /usr/bin/ent /root/osmedeus-base/binaries/ent
+cp /usr/bin/ent /osmedeus-base/binaries/ent
 
 install_banner "bc"
 apt-get install bc > /dev/null
-cp /usr/bin/bc /root/osmedeus-base/binaries/bc
+cp /usr/bin/bc /osmedeus-base/binaries/bc
 
 install_banner "arjun"
 pip3 install arjun > /dev/null
-cp /usr/local/bin/arjun /root/osmedeus-base/binaries/arjun
+cp /usr/local/bin/arjun /osmedeus-base/binaries/arjun
 
 install_banner "gf"
 go install github.com/tomnomnom/gf@latest > /dev/null
-cp /root/go/bin/gf /root/osmedeus-base/binaries/gf
+cp /root/go/bin/gf /osmedeus-base/binaries/gf
 
 install_banner "cookiemonster"
 go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest > /dev/null
-cp /root/go/bin/cookiemonster /root/osmedeus-base/binaries/cookiemonster
+cp /root/go/bin/cookiemonster /osmedeus-base/binaries/cookiemonster
 
 install_banner "nomore403"
 download $TMP_DIST/nomore403 https://github.com/devploit/nomore403/releases/download/1.0.1/nomore403_linux_amd64
-mv $TMP_DIST/nomore403 /root/osmedeus-base/binaries/nomore403
+mv $TMP_DIST/nomore403 /osmedeus-base/binaries/nomore403
 git clone https://github.com/devploit/nomore403 > /dev/null
-cp -r nomore403/payloads /root/osmedeus-base/binaries/403nomore-payloads
+cp -r nomore403/payloads /osmedeus-base/binaries/403nomore-payloads
 rm -rf nomore403/
 
 install_banner "LFImap"
-git clone https://github.com/hansmach1ne/LFImap.git /root/osmedeus-base/binaries/LFImap
-pip3 install -r /root/osmedeus-base/binaries/LFImap/requirements.txt > /dev/null
+git clone https://github.com/hansmach1ne/LFImap.git /osmedeus-base/binaries/LFImap
+pip3 install -r /osmedeus-base/binaries/LFImap/requirements.txt > /dev/null
 
 install_banner "NucleiFuzzer"
 git clone https://github.com/0xKayala/NucleiFuzzer.git > /dev/null 
 chmod +x NucleiFuzzer/install.sh 
 NucleiFuzzer/install.sh 2>/dev/null
-cp /usr/bin/nf /root/osmedeus-base/binaries/nf
+cp /usr/bin/nf /osmedeus-base/binaries/nf
 
 install_banner "unfurl"
 go install github.com/tomnomnom/unfurl@latest > /dev/null
-cp /root/go/bin/unfurl /root/osmedeus-base/binaries/unfurl
+cp /root/go/bin/unfurl /osmedeus-base/binaries/unfurl
 
 install_banner "Oralyzer"
-git clone https://github.com/r0075h3ll/Oralyzer.git /root/osmedeus-base/binaries/Oralyzer > /dev/null
-pip3 install -r /root/osmedeus-base/binaries/Oralyzer/requirements.txt > /dev/null
+git clone https://github.com/r0075h3ll/Oralyzer.git /osmedeus-base/binaries/Oralyzer > /dev/null
+pip3 install -r /osmedeus-base/binaries/Oralyzer/requirements.txt > /dev/null
 
 install_banner "sqlmap"
 apt-get install sqlmap > /dev/null
-cp /usr/bin/sqlmap /root/osmedeus-base/binaries/sqlmap
+cp /usr/bin/sqlmap /osmedeus-base/binaries/sqlmap
 
 install_banner "tplmap"
-git clone https://github.com/epinna/tplmap /root/osmedeus-base/binaries/tplmap > /dev/null
-pip3 install -r /root/osmedeus-base/binaries/tplmap/requirements.txt > /dev/null
+git clone https://github.com/epinna/tplmap /osmedeus-base/binaries/tplmap > /dev/null
+pip3 install -r /osmedeus-base/binaries/tplmap/requirements.txt > /dev/null
 
 install_banner "dalfox"
 go install github.com/hahwul/dalfox/v2@latest > /dev/null
-cp /root/go/bin/dalfox /root/osmedeus-base/binaries/dalfox
+cp /root/go/bin/dalfox /osmedeus-base/binaries/dalfox
 
 install_banner "cloud_enum"
-git clone https://github.com/initstring/cloud_enum /root/osmedeus-base/binaries/cloud_enum > /dev/null
-pip3 install -r /root/osmedeus-base/binaries/cloud_enum/requirements.txt > /dev/null
-cp /root/osmedeus-base/binaries/cloud_enum/cloud_enum.py /root/osmedeus-base/binaries/cloud_enum.py 
+git clone https://github.com/initstring/cloud_enum /osmedeus-base/binaries/cloud_enum > /dev/null
+pip3 install -r /osmedeus-base/binaries/cloud_enum/requirements.txt > /dev/null
+cp /osmedeus-base/binaries/cloud_enum/cloud_enum.py /osmedeus-base/binaries/cloud_enum.py 
 
 install_banner "GraphCrawler"
-git clone https://github.com/gsmith257-cyber/GraphCrawler /root/osmedeus-base/binaries/GraphCrawler > /dev/null
-pip3 install -r /root/osmedeus-base/binaries/GraphCrawler/requirements.txt > /dev/null
+git clone https://github.com/gsmith257-cyber/GraphCrawler /osmedeus-base/binaries/GraphCrawler > /dev/null
+pip3 install -r /osmedeus-base/binaries/GraphCrawler/requirements.txt > /dev/null
 
