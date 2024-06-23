@@ -133,7 +133,7 @@ install_banner "NucleiFuzzer"
 git clone https://github.com/0xKayala/NucleiFuzzer.git /tmp/NucleiFuzzer > /dev/null 
 chmod +x /tmp/NucleiFuzzer/install.sh 
 /tmp/NucleiFuzzer/install.sh 2>/dev/null
-cp /usr/bin/nf /root/osmedeus-base/binaries/nf
+cp /tmp/NucleiFuzzer/NucleiFuzzer.sh /root/osmedeus-base/binaries/nf
 
 install_banner "unfurl"
 go install github.com/tomnomnom/unfurl@latest 2>&1 > /dev/null
@@ -144,7 +144,7 @@ git clone https://github.com/r0075h3ll/Oralyzer.git /root/osmedeus-base/binaries
 pip3 install -r /root/osmedeus-base/binaries/Oralyzer/requirements.txt > /dev/null
 
 install_banner "sqlmap"
-apt-get install sqlmap > /dev/null
+apt-get -y install sqlmap > /dev/null
 cp /usr/bin/sqlmap /root/osmedeus-base/binaries/sqlmap
 
 install_banner "tplmap"
